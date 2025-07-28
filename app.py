@@ -4,7 +4,7 @@ import joblib
 
 model = joblib.load("random_forest_model.joblib") 
 scaler = joblib.load("scaler.joblib")
-feature_columns = joblib.load("features.joblib")  
+feature_columns = joblib.load("features_columns.joblib")  
 
 st.title("Credit Card Fraud Detection App")
 st.write("Upload transaction data to check fraud.")
