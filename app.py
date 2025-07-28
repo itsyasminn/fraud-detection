@@ -2,13 +2,12 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Load model, scaler, and expected feature columns
 model = joblib.load("random_forest_model.joblib")
 scaler = joblib.load("scaler.joblib")
-feature_columns = joblib.load("feature_columns.joblib")  # Make sure you saved this during training
+feature_columns = joblib.load("feature_columns.joblib")  
 
 st.title("Credit Card Fraud Detection App")
-st.write("Upload transaction data to check for fraud.")
+st.write("Upload transaction data to check for fraud:")
 
 uploaded_file = st.file_uploader("Upload a CSV file", type="csv")
 
